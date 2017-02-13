@@ -2,6 +2,7 @@ FROM openjdk:7-alpine
 
 RUN apk update \
     && apk add \
+        apache-ant      \
         autoconf        \
         automake        \
         bash            \
