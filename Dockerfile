@@ -1,19 +1,18 @@
-FROM openjdk:7-alpine
+FROM openjdk:7
 
-RUN apk update \
-    && apk add \
-        apache-ant      \
+RUN apt-get update -y \
+    && apt-get install -y \
+        ant             \
         autoconf        \
         automake        \
         bash            \
-        ca-certificates \
         git             \
         make            \
-        openssh         \
+        openssh-client  \
         rsync           \
+        unzip           \
         wget            \
-    && update-ca-certificates \
-    && rm -rf /var/cache/apk/*
+    && rm -rf /var/lib/apt/lists/*
 
 # Download and install saxon jar
 RUN wget https://downloads.sourceforge.net/project/saxon/Saxon-HE/9.7/SaxonHE9-7-0-15J.zip \
