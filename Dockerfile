@@ -6,10 +6,13 @@ RUN apt-get update -y \
         autoconf        \
         automake        \
         bash            \
+        gawk            \
         git             \
         make            \
         openssh-client  \
+        php5            \
         rsync           \
+        time            \
         unzip           \
         wget            \
     && rm -rf /var/lib/apt/lists/*
