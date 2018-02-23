@@ -9,6 +9,7 @@ RUN apt-get update -y \
         gawk            \
         git             \
         make            \
+        npm             \
         openssh-client  \
         php5            \
         rsync           \
