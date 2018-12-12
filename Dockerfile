@@ -15,7 +15,9 @@ RUN apt-get update -y \
         time            \
         unzip           \
         wget            \
-    && rm -rf /var/lib/apt/lists/*
+        texinfo         \
+    && rm -rf /var/lib/apt/lists/* \
+    && apt-get clean
 
 # Download and install saxon jar
 RUN wget https://downloads.sourceforge.net/project/saxon/Saxon-HE/9.7/SaxonHE9-7-0-15J.zip \
