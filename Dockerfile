@@ -20,10 +20,10 @@ RUN apt-get update -y \
     && apt-get clean
 
 # Download and install saxon jar
-RUN wget https://downloads.sourceforge.net/project/saxon/Saxon-HE/9.7/SaxonHE9-7-0-15J.zip \
-    && test "$( sha256sum SaxonHE9-7-0-15J.zip | cut -d' ' -f1 )" = daa159f44e9eb4d8de4b60826c7abe33e4a1fe57e94b21f7abd4cedb3a265a0f \
+RUN wget https://downloads.sourceforge.net/project/saxon/Saxon-HE/9.8/SaxonHE9-8-0-12J.zip \
+    && test "$( sha256sum SaxonHE9-8-0-12J.zip | cut -d' ' -f1 )" = f48be01705ff91881ea5953982db054f8a2f152dcec9f5e76267a2ee4a1f3ded \
     && mkdir -p /usr/share/ant/lib/saxon9/ \
-    && unzip SaxonHE9-7-0-15J.zip saxon9he.jar -d /usr/share/ant/lib/saxon9/
+    && unzip SaxonHE9-8-0-12J.zip saxon9he.jar -d /usr/share/ant/lib/saxon9/
 
 # Install NodeJS/NPM
 # gpg keys listed at https://github.com/nodejs/node
