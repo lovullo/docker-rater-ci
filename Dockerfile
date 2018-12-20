@@ -16,6 +16,7 @@ RUN apt-get update -y \
         unzip           \
         wget            \
         texinfo         \
+        libxml2-utils   \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get clean
 
